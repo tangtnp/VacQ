@@ -16,7 +16,10 @@ app.use(express.json()) ;
 
 //Routes files
 const hospitals = require('./routes/hospitals.js') ;
+const auth = require('./routes/auth');
+
 app.use('/api/v1/hospitals',hospitals) ;
+app.use('/api/v1/auth',auth)
 
 
 const PORT = process.env.PORT || 5000 ;
