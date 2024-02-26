@@ -72,3 +72,8 @@ exports.deleteHospital = async(req,res,next)=>{
     }
     
 };
+
+
+//@desc     Get current logged in user
+//@route     POST/api/v1/hospitals/:id
+//@access   Public

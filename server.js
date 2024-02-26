@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv') ;
-const connectDB =require('./config/db')
+const cookieParser = require('cookie-parser') ;
+const connectDB =require('./config/db');
 
 //Load env vars
 dotenv.config({path:'./config/config.env'}) ;
@@ -10,8 +11,11 @@ connectDB() ;
 
 const app = express() ;
 
-//Body paser
+//Body parser
 app.use(express.json()) ;
+
+//Cookie parser
+app.use(cookieParser()) ;
 
 
 //Routes files
